@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutterapp/pages/signin.dart';
 import 'package:lottie/lottie.dart';
 import 'package:flutterapp/pages/credit.dart';
 import 'package:flutterapp/pages/debit.dart';
@@ -33,20 +34,23 @@ class _LoginPageState extends State<LoginPage> {
           child: Container(
             padding: const EdgeInsets.all(0.0),
             decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(10), // Rounded edges with a radius of 10
-              color: const Color.fromARGB(236, 255, 209, 134),
+              borderRadius: BorderRadius.circular(
+                  10), // Rounded edges with a radius of 10
+              color: Colors.transparent,
             ),
             child: IconButton(
-              icon: const Icon(Icons.menu),
+              icon: const Icon(Icons.exit_to_app_outlined),
               onPressed: () {
-                // Handle menu icon tap
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => const SignInScreen()));
               },
             ),
           ),
         ),
         actions: [
           Padding(
-            padding: const EdgeInsets.only(right: 20.0), // Add some right padding to the greeting text
+            padding: const EdgeInsets.only(
+                right: 20.0), // Add some right padding to the greeting text
             child: Text(
               _getGreeting(), // Display greeting text
               style: const TextStyle(
@@ -78,7 +82,7 @@ class _LoginPageState extends State<LoginPage> {
                 },
                 style: ElevatedButton.styleFrom(
                   foregroundColor: Colors.white,
-                  backgroundColor: const Color.fromRGBO(86,66,69, 1),
+                  backgroundColor: const Color.fromRGBO(86, 66, 69, 1),
                   padding: const EdgeInsets.symmetric(vertical: 15),
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(30),
@@ -110,7 +114,7 @@ class _LoginPageState extends State<LoginPage> {
                 },
                 style: ElevatedButton.styleFrom(
                   foregroundColor: Colors.white,
-                  backgroundColor: const Color.fromRGBO(254,160,160, 1),
+                  backgroundColor: const Color.fromRGBO(254, 160, 160, 1),
                   padding: const EdgeInsets.symmetric(vertical: 15),
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(30),

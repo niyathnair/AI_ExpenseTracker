@@ -3,6 +3,7 @@ import 'package:flutter/services.dart'; // Import the services.dart package
 
 // import 'pages/credit.dart';
 import 'pages/login.dart';
+import 'pages/signin.dart';
 
 void main() {
   // Hide the status bar
@@ -17,7 +18,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return const MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: LoginPage(),
+      home: SignInScreen(),
     );
   }
 }
